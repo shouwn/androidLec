@@ -1,5 +1,6 @@
 package net.skhu.e01button
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        findViewById<Button>(R.id.button).setOnClickListener {
+            val temp = findViewById<EditText>(R.id.editText).text
+            findViewById<EditText>(R.id.editText).text =
+                    findViewById<EditText>(R.id.editText2).text
+            findViewById<EditText>(R.id.editText2).text = temp
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -32,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean =
         when(item?.itemId){
             R.id.action_signUp -> {
-                Toast.makeText(this, "회원가입 메뉴 클릭", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, SignupActivity::class.java))
                 true
             }
             R.id.action_memo -> {
