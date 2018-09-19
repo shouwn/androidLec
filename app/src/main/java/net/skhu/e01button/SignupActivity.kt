@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_signup.*
+import java.util.function.Supplier
 
 
 class SignupActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        findViewById<Button>(R.id.button2).setOnClickListener {
+        button2.setOnClickListener {
             if (editText_loginId.text.isBlank())
                 editText_loginId.error = "로그인 아이디를 입력하세요"
 
@@ -26,8 +27,7 @@ class SignupActivity : AppCompatActivity() {
                 editText_password2.error = "비밀번호가 일치하지 않습니다"
 
             // 회원 가입 데이터를 서버에 전송하는 코드를 구현해야 함.
-
-            val msg = "회원가입 성공: ${editText_loginId.text} ${editText_email.text}l"
+            val msg = "회원가입 성공: ${editText_loginId.text} ${editText_email.text}"
             Toast.makeText(this@SignupActivity, msg, Toast.LENGTH_LONG).show()
         }
     }

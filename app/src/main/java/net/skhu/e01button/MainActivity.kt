@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_memo -> {
-                Toast.makeText(this, "메모장 메뉴 클릭", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, MemoActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

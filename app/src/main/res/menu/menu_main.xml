@@ -6,5 +6,7 @@
           android:title="@string/action_signUp" app:showAsAction="always" />
     <item android:id="@+id/action_memo"
           android:title="@string/action_memo" app:showAsAction="always" />
+    <item android:id="@+id/action_temp"
+          android:title="@string/action_memo" app:showAsAction="never" />
 
 </menu>
