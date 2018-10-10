@@ -16,4 +16,11 @@
     <string name="input_content">내용을 입력하세요.</string>
     <string name="save">저장</string>
     <string name="refresh">새로고침</string>
+    <string name="autologin">자동 로그인</string>
+    <string name="red">빨간색</string>
+    <string name="yellow">노란색</string>
+    <string name="blue">파란색</string>
+    <string name="cat">고양이</string>
+    <string name="dog">강아지</string>
+    <string name="owl">부엉이</string>
 </resources>
