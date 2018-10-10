@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, MemoActivity::class.java))
                 true
             }
+            R.id.action_buttons -> {
+                startActivity(Intent(this, ButtonActivity::class.java))
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 }

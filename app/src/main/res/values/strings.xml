@@ -2,6 +2,7 @@
     <string name="app_name">E02Views</string>
     <string name="action_signUp">회원가입</string>
     <string name="action_memo">메모장</string>
+    <string name="action_buttons">버튼</string>
     <string name="loginId">로그인 아이디</string>
     <string name="input_loginId">로그인 아이디를 입력하세요.</string>
     <string name="password">비밀번호</string>
@@ -14,4 +15,5 @@
     <string name="input_title">제목을 입력하세요.</string>
     <string name="input_content">내용을 입력하세요.</string>
     <string name="save">저장</string>
+    <string name="refresh">새로고침</string>
 </resources>
