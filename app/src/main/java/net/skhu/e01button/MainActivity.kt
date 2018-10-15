@@ -41,6 +41,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, ButtonActivity::class.java))
                 true
             }
+            R.id.action_spinners -> {
+                startActivity(Intent(this, SpinnersActivity::class.java))
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 }

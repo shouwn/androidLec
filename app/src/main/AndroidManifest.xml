@@ -25,6 +25,11 @@
                 android:label="@string/action_buttons"/>
         <activity android:name=".CheckboxesActivity">
         </activity>
+        <activity
+                android:name=".SpinnersActivity"
+                android:label="@string/action_spinners"
+        >
+        </activity>
     </application>
 
 </manifest>
