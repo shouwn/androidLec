@@ -58,21 +58,21 @@
                 android:text="@string/cat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioCat" android:layout_weight="1"
-                android:drawableLeft="@mipmap/animal_cat_small"/>
+                android:drawableLeft="@drawable/animal_cat_small"/>
         <RadioButton
                 android:text="@string/dog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioDog" android:layout_weight="1"
-                android:drawableLeft="@mipmap/animal_dog_small"/>
+                android:drawableLeft="@drawable/animal_dog_small"/>
         <RadioButton
                 android:text="@string/owl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioOwl" android:layout_weight="1"
-                android:drawableLeft="@mipmap/animal_owl_small"/>
+                android:drawableLeft="@drawable/animal_owl_small"/>
     </RadioGroup>
     <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@mipmap/animal_cat_large"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/animal_cat_large"
             android:id="@+id/imageView1"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
             android:layout_marginStart="32dp" android:layout_marginTop="32dp"

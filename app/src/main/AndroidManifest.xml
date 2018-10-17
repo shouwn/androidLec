@@ -27,9 +27,12 @@
         </activity>
         <activity
                 android:name=".SpinnersActivity"
-                android:label="@string/action_spinners"
-        >
+                android:label="@string/action_spinners">
         </activity>
+        <activity
+                android:name=".AlertsActivity"
+                android:label="Alerts"
+        />
     </application>
 
 </manifest>

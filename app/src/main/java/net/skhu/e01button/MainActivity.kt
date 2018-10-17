@@ -1,5 +1,6 @@
 package net.skhu.e01button
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -29,22 +30,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean =
         when(item?.itemId){
-            R.id.action_signUp -> {
-                startActivity(Intent(this, SignupActivity::class.java))
-                true
-            }
-            R.id.action_memo -> {
-                startActivity(Intent(this, MemoActivity::class.java))
-                true
-            }
-            R.id.action_buttons -> {
-                startActivity(Intent(this, ButtonActivity::class.java))
-                true
-            }
-            R.id.action_spinners -> {
-                startActivity(Intent(this, SpinnersActivity::class.java))
-                true
-            }
+            R.id.action_signUp -> myStartActivity(SignupActivity::class.java)
+            R.id.action_memo -> myStartActivity(MemoActivity::class.java)
+            R.id.action_buttons -> myStartActivity(ButtonActivity::class.java)
+            R.id.action_spinners -> myStartActivity(SpinnersActivity::class.java)
+            R.id.action_alerts -> myStartActivity(AlertsActivity::class.java)
             else -> super.onOptionsItemSelected(item)
         }
+
+    private fun myStartActivity(clazz: Class<*>) =
+            startActivity(Intent(this, clazz))
+                    .let { true }
 }

@@ -30,13 +30,23 @@ class CheckboxesActivity : AppCompatActivity() {
 
         radioGroup2.setOnCheckedChangeListener { _, checkedId ->
             imageView1.setImageResource(when (checkedId){
-                radioCat.id -> R.mipmap.animal_cat_large
-                radioDog.id -> R.mipmap.animal_dog_large
-                radioOwl.id -> R.mipmap.animal_owl_large
+                radioCat.id -> R.drawable.animal_cat_large
+                radioDog.id -> R.drawable.animal_dog_large
+                radioOwl.id -> R.drawable.animal_owl_large
                 else -> 0
             })
         }
 
+        btnSave.setOnClickListener {
+            Toast.makeText(this@CheckboxesActivity,
+                    """checkBox1=${checkBox1.isChecked}
+                        |switch1=${switch1.isChecked}
+                        |radioGroup1=${when(radioGroup1.checkedRadioButtonId){
+                        R.id ->
+                    }}
+                        |
+                    """.trimMargin())
+        }
 
     }
 }
