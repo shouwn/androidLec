@@ -37,16 +37,16 @@ class CheckboxesActivity : AppCompatActivity() {
             })
         }
 
-        btnSave.setOnClickListener {
-            Toast.makeText(this@CheckboxesActivity,
-                    """checkBox1=${checkBox1.isChecked}
-                        |switch1=${switch1.isChecked}
-                        |radioGroup1=${when(radioGroup1.checkedRadioButtonId){
-                        R.id ->
-                    }}
-                        |
-                    """.trimMargin())
-        }
+//        btnSave.setOnClickListener {
+//            Toast.makeText(this@CheckboxesActivity,
+//                    """checkBox1=${checkBox1.isChecked}
+//                        |switch1=${switch1.isChecked}
+//                        |radioGroup1=${when(radioGroup1.checkedRadioButtonId){
+//                        R.id ->
+//                    }}
+//                        |
+//                    """.trimMargin())
+//        }
 
     }
 }

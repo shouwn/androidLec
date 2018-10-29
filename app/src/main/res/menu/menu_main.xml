@@ -12,5 +12,7 @@
           android:title="@string/action_spinners" app:showAsAction="never" />
     <item android:id="@+id/action_alerts"
           android:title="@string/action_alerts" app:showAsAction="never" />
+    <item android:id="@+id/action_firebase"
+          android:title="@string/action_firebase" app:showAsAction="never" />
 
 </menu>

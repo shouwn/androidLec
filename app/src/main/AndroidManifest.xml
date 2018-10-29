@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="net.skhu.e01button">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -31,8 +33,9 @@
         </activity>
         <activity
                 android:name=".AlertsActivity"
-                android:label="Alerts"
-        />
+                android:label="Alerts"/>
+        <activity android:name=".E03Firebase">
+        </activity>
     </application>
 
 </manifest>

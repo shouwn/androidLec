@@ -48,4 +48,6 @@
     <string name="no">아니오</string>
     <string name="selectAnimal">동물 선택</string>
     <string name="cancel">취소</string>
+    <string name="saveIntoServer">서버에 저장</string>
+    <string name="action_firebase">Firebase</string>
 </resources>
