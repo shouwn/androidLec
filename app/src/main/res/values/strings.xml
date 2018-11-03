@@ -50,4 +50,5 @@
     <string name="cancel">취소</string>
     <string name="saveIntoServer">서버에 저장</string>
     <string name="action_firebase">Firebase</string>
+    <string name="action_checkboxes">Checkboxes</string>
 </resources>

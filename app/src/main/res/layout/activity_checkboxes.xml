@@ -33,17 +33,17 @@
         <RadioButton
                 android:text="@string/red"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/radioButton1" android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/radioRed" android:layout_weight="1"
                 android:background="@color/transparentRed"/>
         <RadioButton
                 android:text="@string/yellow"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/radioYellow" android:layout_weight="1"
                 android:background="#32ffff00"/>
         <RadioButton
                 android:text="@string/blue"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/radioButton3" android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/radioBlue" android:layout_weight="1"
                 android:background="@color/transparentBlue"/>
     </RadioGroup>
     <RadioGroup

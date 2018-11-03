@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             R.id.action_signUp -> myStartActivity(SignupActivity::class.java)
             R.id.action_memo -> myStartActivity(MemoActivity::class.java)
             R.id.action_buttons -> myStartActivity(ButtonActivity::class.java)
+            R.id.action_checkboxes -> myStartActivity(CheckboxesActivity::class.java)
             R.id.action_spinners -> myStartActivity(SpinnersActivity::class.java)
             R.id.action_alerts -> myStartActivity(AlertsActivity::class.java)
             R.id.action_firebase -> myStartActivity(E03Firebase::class.java)

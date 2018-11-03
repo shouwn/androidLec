@@ -37,16 +37,27 @@ class CheckboxesActivity : AppCompatActivity() {
             })
         }
 
-//        btnSave.setOnClickListener {
-//            Toast.makeText(this@CheckboxesActivity,
-//                    """checkBox1=${checkBox1.isChecked}
-//                        |switch1=${switch1.isChecked}
-//                        |radioGroup1=${when(radioGroup1.checkedRadioButtonId){
-//                        R.id ->
-//                    }}
-//                        |
-//                    """.trimMargin())
-//        }
+        btnSave.setOnClickListener {
+            val color = when(radioGroup1.checkedRadioButtonId){
+                R.id.radioRed -> "red "
+                R.id.radioYellow -> "yellow "
+                else -> "blue "
+            }
 
+            val animal = when(radioGroup1.checkedRadioButtonId){
+                R.id.radioCat -> "cat"
+                R.id.radioDog -> "dog"
+                else -> "owl"
+            }
+
+            Toast.makeText(this@CheckboxesActivity,
+                    """
+                        |checkBox1=${checkBox1.isChecked}
+                        |switch1=${switch1.isChecked}
+                        |radioGroup1=$color $animal
+                    """.trimMargin(),
+                    Toast.LENGTH_SHORT)
+                    .show()
+        }
     }
 }
