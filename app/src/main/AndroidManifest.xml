@@ -36,6 +36,10 @@
                 android:label="Alerts"/>
         <activity android:name=".E03Firebase">
         </activity>
+        <activity android:name=".E4List">
+        </activity>
+        <activity android:name=".E4List2">
+        </activity>
     </application>
 
 </manifest>

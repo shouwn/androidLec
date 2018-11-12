@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
             R.id.action_spinners -> myStartActivity(SpinnersActivity::class.java)
             R.id.action_alerts -> myStartActivity(AlertsActivity::class.java)
             R.id.action_firebase -> myStartActivity(E03Firebase::class.java)
+            R.id.action_listView -> myStartActivity(E4List::class.java)
+            R.id.action_listView2 -> myStartActivity(E4List2::class.java)
             else -> super.onOptionsItemSelected(item)
         }
 
