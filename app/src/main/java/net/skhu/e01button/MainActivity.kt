@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             R.id.action_firebase -> myStartActivity(E03Firebase::class.java)
             R.id.action_listView -> myStartActivity(E4List::class.java)
             R.id.action_listView2 -> myStartActivity(E4List2::class.java)
+            R.id.action_listView3 -> myStartActivity(E05List::class.java)
             else -> super.onOptionsItemSelected(item)
         }
 

@@ -53,4 +53,6 @@
     <string name="action_checkboxes">Checkboxes</string>
     <string name="action_listView">ListView</string>
     <string name="action_listView2">ListView2</string>
+    <string name="action_listView3">ListView3</string>
+    <string name="action_remove">삭제</string>
 </resources>

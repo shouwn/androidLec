@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".E4List2">
         </activity>
+        <activity android:name=".E05List">
+        </activity>
     </application>
 
 </manifest>

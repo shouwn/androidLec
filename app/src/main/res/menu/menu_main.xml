@@ -20,5 +20,9 @@
           android:title="@string/action_listView" app:showAsAction="never"/>
     <item android:id="@+id/action_listView2"
           android:title="@string/action_listView2" app:showAsAction="never"/>
+    <item android:id="@+id/action_listView3"
+          android:title="@string/action_listView3" app:showAsAction="never"/>
+    <item android:id="@+id/action_remove"
+          android:title="@string/action_remove" app:showAsAction="ifRoom" />
 
 </menu>
