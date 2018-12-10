@@ -42,6 +42,8 @@
         </activity>
         <activity android:name=".E05List">
         </activity>
+        <activity android:name=".E06List">
+        </activity>
     </application>
 
 </manifest>

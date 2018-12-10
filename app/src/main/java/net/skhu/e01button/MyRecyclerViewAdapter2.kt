@@ -9,11 +9,10 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.TextView
-import android.widget.Toast
 
 class MyRecyclerViewAdapter2(
         context: Context,
-        val list: List<Item2>
+        val list: List<Item>
 ) : RecyclerView.Adapter<MyRecyclerViewAdapter2.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), CompoundButton.OnCheckedChangeListener {

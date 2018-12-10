@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_e05_list.*
@@ -13,13 +12,13 @@ import kotlinx.android.synthetic.main.activity_e05_list.*
 class E05List : AppCompatActivity() {
 
     lateinit var myRecyclerViewAdapter2: MyRecyclerViewAdapter2
-    lateinit var list: MutableList<Item2>
+    lateinit var list: MutableList<Item>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_e4_list2)
 
-        list = mutableListOf(Item2("one"), Item2("two"))
+        list = mutableListOf(Item("one"), Item("two"))
 
         myRecyclerViewAdapter2 = MyRecyclerViewAdapter2(this, list)
         recyclerView.apply {
@@ -31,7 +30,7 @@ class E05List : AppCompatActivity() {
 
         btnAdd.setOnClickListener {
             editText.also { text ->
-                list.add(Item2(text.text.toString()))
+                list.add(Item(text.text.toString()))
                 myRecyclerViewAdapter2.notifyDataSetChanged()
             }.apply {
                 text.clear()
