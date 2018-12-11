@@ -10,7 +10,7 @@ import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.TextView
 
-class E06RecyclerViewAdapter(context: Context, val list: MutableList<Item>) : RecyclerView.Adapter<E06RecyclerViewAdapter.ViewHolder>() {
+class E06RecyclerViewAdapter(context: Context, val list: ItemList) : RecyclerView.Adapter<E06RecyclerViewAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), CompoundButton.OnCheckedChangeListener, View.OnClickListener{
 
@@ -25,7 +25,7 @@ class E06RecyclerViewAdapter(context: Context, val list: MutableList<Item>) : Re
         }
 
         fun setData(){
-            list[super.getAdapterPosition()].also {
+            list.get(super.getAdapterPosition()).also {
                 this.textView1.text = it.title
                 this.textView2.text = it.createTimeFormatted
                 this.checkBox.isChecked = it.checked
@@ -33,7 +33,7 @@ class E06RecyclerViewAdapter(context: Context, val list: MutableList<Item>) : Re
         }
 
         override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
-            list[super.getAdapterPosition()].checked = isChecked
+            list.get(super.getAdapterPosition()).checked = isChecked
             if(isChecked) ++checkedItemCount else --checkedItemCount
             if(checkedItemCount <= 1)
                 (textView1.context as Activity).invalidateOptionsMenu()

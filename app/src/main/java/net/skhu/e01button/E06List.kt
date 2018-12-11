@@ -39,6 +39,7 @@ class E06List : AppCompatActivity() {
     private fun initRecyclerView() {
         this.list = ItemList()
 
+        this.recyclerViewAdapter = E06RecyclerViewAdapter(this, list)
 
     }
 }
