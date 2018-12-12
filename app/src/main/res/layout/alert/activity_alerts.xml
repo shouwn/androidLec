@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AlertsActivity">
+        tools:context=".alert.AlertsActivity">
 
     <Button
             android:text="AlertDialog1"

@@ -1,4 +1,4 @@
-package net.skhu.e01button
+package net.skhu.e01button.spinner
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import android.R.layout.*
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_spinners.*
+import net.skhu.e01button.R
 
 
 class SpinnersActivity : AppCompatActivity() {

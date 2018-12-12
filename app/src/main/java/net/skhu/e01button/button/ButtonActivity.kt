@@ -1,10 +1,11 @@
-package net.skhu.e01button
+package net.skhu.e01button.button
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_button.*
+import net.skhu.e01button.R
 
 class ButtonActivity : AppCompatActivity() {
 

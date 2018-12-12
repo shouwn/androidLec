@@ -1,4 +1,4 @@
-package net.skhu.e01button
+package net.skhu.e01button.signup
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

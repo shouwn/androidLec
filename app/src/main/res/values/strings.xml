@@ -55,4 +55,6 @@
     <string name="action_listView2">ListView2</string>
     <string name="action_listView3">ListView3</string>
     <string name="action_remove">삭제</string>
+    <string name="action_logIn">로그인</string>
+    <string name="action_logOut">로그아웃</string>
 </resources>

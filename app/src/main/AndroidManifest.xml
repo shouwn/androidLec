@@ -18,29 +18,29 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity">
+        <activity android:name=".signup.SignupActivity">
         </activity>
         <activity android:name=".MemoActivity">
         </activity>
         <activity
-                android:name=".ButtonActivity"
+                android:name=".button.ButtonActivity"
                 android:label="@string/action_buttons"/>
-        <activity android:name=".CheckboxesActivity">
+        <activity android:name=".checkbox.CheckboxesActivity">
         </activity>
         <activity
-                android:name=".SpinnersActivity"
+                android:name=".spinner.SpinnersActivity"
                 android:label="@string/action_spinners">
         </activity>
         <activity
-                android:name=".AlertsActivity"
+                android:name=".alert.AlertsActivity"
                 android:label="Alerts"/>
-        <activity android:name=".E03Firebase">
+        <activity android:name=".firebase.E03Firebase">
         </activity>
-        <activity android:name=".E4List">
+        <activity android:name=".listView.E4List">
         </activity>
-        <activity android:name=".E4List2">
+        <activity android:name=".listView.E4List2">
         </activity>
-        <activity android:name=".E05List">
+        <activity android:name=".recyclerView.E05List">
         </activity>
         <activity android:name=".E06List">
         </activity>

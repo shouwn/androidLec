@@ -1,4 +1,4 @@
-package net.skhu.e01button
+package net.skhu.e01button.firebase
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +8,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_e03_firebase.*
+import net.skhu.e01button.R
 
 class E03Firebase : AppCompatActivity() {
 

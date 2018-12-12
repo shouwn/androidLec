@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_memo.*
+import net.skhu.e01button.signup.SignupActivity
 
 class MemoActivity : AppCompatActivity() {
 

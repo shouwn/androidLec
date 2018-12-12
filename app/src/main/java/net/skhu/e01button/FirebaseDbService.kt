@@ -1,5 +1,6 @@
 package net.skhu.e01button
 
+import android.util.Log
 import com.google.firebase.database.*
 
 class FirebaseDbService(
@@ -54,6 +55,6 @@ class FirebaseDbService(
     }
 
     override fun onCancelled(databaseError: DatabaseError) {
-        Log.e("Firebase Error")
+        Log.e("Firebase Error", databaseError.message)
     }
 }
