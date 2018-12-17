@@ -5,11 +5,15 @@ import java.io.Serializable
 import java.text.SimpleDateFormat
 import java.util.*
 
-class Item(
-        val title: String,
-        var createTime: Date = Date(),
-        var checked: Boolean = false
-) : Serializable{
+class Item(){
+
+    constructor(title: String):this(){
+        this.title = title
+    }
+
+    lateinit var title: String
+    var createTime: Date = Date()
+    var checked: Boolean = false
 
     companion object {
         val format = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")

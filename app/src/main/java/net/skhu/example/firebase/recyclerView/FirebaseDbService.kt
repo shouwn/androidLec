@@ -1,12 +1,11 @@
 package net.skhu.example.firebase.recyclerView
 
-import com.google.firebase.database.ChildEventListener
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import android.util.Log
+import com.google.firebase.database.*
 
 class FirebaseDbService(
-        val myRecyclerViewAdapter: MyRecyclerViewAdapter,
-        val itemList: ItemList,
+        private val myRecyclerViewAdapter: MyRecyclerViewAdapter,
+        private val itemList: ItemList,
         private val userId: String,
         referencePath: String = "myServerData04",
         private val databaseReference: DatabaseReference =
@@ -27,6 +26,43 @@ class FirebaseDbService(
     }
 
     fun updateInServer(index: Int) {
+        val key = itemList.getKey(index)
+        val item = itemList.getItem(index)
+        databaseReference.child(userId).child(key).setValue(item)
+    }
 
+    override fun onChildAdded(dataSnapshot: DataSnapshot, previousChildName: String?) {
+        val key = dataSnapshot.key!!
+        val item = dataSnapshot.getValue<Item>(Item::class.java)!!
+
+        val index = itemList.add(key, item)
+
+        Log.i("FirebaseDbService: ", "${index}에 ${item.title}가 추가됨")
+
+        myRecyclerViewAdapter.notifyItemInserted(index)
+    }
+
+    override fun onChildChanged(dataSnapshot: DataSnapshot, previousChildName: String?) {
+        val key = dataSnapshot.key!!
+        val item = dataSnapshot.getValue(Item::class.java)!!
+
+        val index = itemList.update(key, item)
+
+        myRecyclerViewAdapter.notifyItemChanged(index)
+    }
+
+    override fun onChildRemoved(dataSnapshot: DataSnapshot) {
+        val key = dataSnapshot.key!!
+        val index = itemList.remove(key)
+
+        myRecyclerViewAdapter.notifyItemRemoved(index)
+    }
+
+    override fun onChildMoved(p0: DataSnapshot, p1: String?) {
+
+    }
+
+    override fun onCancelled(databaseError: DatabaseError) {
+        Log.e("Firebase Error", databaseError.message)
     }
 }
