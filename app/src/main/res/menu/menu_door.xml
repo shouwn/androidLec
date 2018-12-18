@@ -3,8 +3,23 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/action_firebase_with_recyclerView"
-          android:title="@string/firebase_with_recyclerView" app:showAsAction="ifRoom" />
+          android:title="@string/firebase_with_recyclerView" app:showAsAction="never" />
 
     <item android:id="@+id/action_firebase_log_in"
-          android:title="@string/firebase_log_in" app:showAsAction="ifRoom" />
+          android:title="@string/firebase_log_in" app:showAsAction="never" />
+
+    <item android:id="@+id/action_list_view"
+          android:title="@string/list_view" app:showAsAction="never" />
+
+    <item android:id="@+id/action_alert_dialog"
+          android:title="@string/alert_dialog" app:showAsAction="never" />
+
+    <item android:id="@+id/action_spinner"
+          android:title="@string/spinner" app:showAsAction="never" />
+
+    <item android:id="@+id/action_checkbox"
+          android:title="@string/checkbox" app:showAsAction="never" />
+
+    <item android:id="@+id/action_sample"
+          android:title="@string/sample" app:showAsAction="never" />
 </menu>

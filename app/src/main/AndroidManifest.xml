@@ -20,6 +20,18 @@
         </activity>
         <activity android:name=".firebase.logIn.MainActivity">
         </activity>
+        <activity android:name=".listView.MainActivity">
+        </activity>
+        <activity
+                android:name=".alertDialog.MainActivity"
+                android:label="Alerts">
+        </activity>
+        <activity android:name=".spinner.MainActivity">
+        </activity>
+        <activity android:name=".checkbox.MainActivity">
+        </activity>
+        <activity android:name="net.skhu.example.firebase.sample.MainActivity">
+        </activity>
     </application>
 
 </manifest>

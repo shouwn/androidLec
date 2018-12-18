@@ -1,13 +1,16 @@
-package net.skhu.example.firebase.recyclerView
+package net.skhu.example.firebase
 
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import com.google.firebase.database.*
+import net.skhu.example.firebase.recyclerView.Item
+import kotlin.reflect.KClass
 
-class FirebaseDbService(
+class FirebaseDbService<Item : Any>(
         private val recyclerViewAdapter: RecyclerView.Adapter<out RecyclerView.ViewHolder>,
         private val itemList: ItemList<Item>,
         private val userId: String,
+        private val kClazz: KClass<Item>,
         referencePath: String = "myServerData04",
         private val databaseReference: DatabaseReference =
                 FirebaseDatabase.getInstance().getReference(referencePath)
@@ -34,18 +37,18 @@ class FirebaseDbService(
 
     override fun onChildAdded(dataSnapshot: DataSnapshot, previousChildName: String?) {
         val key = dataSnapshot.key!!
-        val item = dataSnapshot.getValue<Item>(Item::class.java)!!
+        val item = dataSnapshot.getValue(kClazz.java)!!
 
         val index = itemList.add(key, item)
 
-        Log.i("FirebaseDbService: ", "${index}에 ${item.title}가 추가됨")
+        Log.i("FirebaseDbService: ", "${index}에 ${item}가 추가됨")
 
         recyclerViewAdapter.notifyItemInserted(index)
     }
 
     override fun onChildChanged(dataSnapshot: DataSnapshot, previousChildName: String?) {
         val key = dataSnapshot.key!!
-        val item = dataSnapshot.getValue(Item::class.java)!!
+        val item = dataSnapshot.getValue(kClazz.java)!!
 
         val index = itemList.update(key, item)
 

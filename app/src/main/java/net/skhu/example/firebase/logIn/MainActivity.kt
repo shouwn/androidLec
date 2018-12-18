@@ -55,7 +55,6 @@ class MainActivity : AppCompatActivity() {
                         Toast.LENGTH_LONG).show()
             } ?: "Anonymous"
 
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 

@@ -1,8 +1,8 @@
-package net.skhu.example.firebase.recyclerView
+package net.skhu.example.firebase.sample
 
 import android.content.Intent
-import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
@@ -21,7 +21,7 @@ import net.skhu.example.firebase.ItemList
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        const val RC_SIGN_IN = 337
+        const val RC_SIGN_IN = 338
     }
 
     private lateinit var myRecyclerViewAdapter: MyRecyclerViewAdapter
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_firebase_recycler_view)
+        setContentView(R.layout.activity_sample)
 
         initRecyclerView()
     }
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         val userId = user?.uid ?: "anonymous"
 
         this.firebaseDbService = FirebaseDbService(
-                myRecyclerViewAdapter, itemList, userId, Item::class)
+                myRecyclerViewAdapter, itemList, userId, Item::class, "myServerData05")
 
         btnAdd.setOnClickListener {
             val title = editText.text.toString()

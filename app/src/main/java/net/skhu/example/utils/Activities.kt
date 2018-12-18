@@ -1,4 +1,4 @@
-package net.skhu.example.firebase.utils
+package net.skhu.example.utils
 
 import android.app.Activity
 import android.content.Intent

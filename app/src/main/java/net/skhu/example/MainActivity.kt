@@ -1,13 +1,11 @@
 package net.skhu.example
 
-import android.app.Activity
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import net.skhu.example.firebase.recyclerView.MainActivity
-import net.skhu.example.firebase.utils.startActivity
+import net.skhu.example.utils.startActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +25,16 @@ class MainActivity : AppCompatActivity() {
                 MainActivity::class.startActivity(this)
             R.id.action_firebase_log_in ->
                 net.skhu.example.firebase.logIn.MainActivity::class.startActivity(this)
+            R.id.action_list_view ->
+                net.skhu.example.listView.MainActivity::class.startActivity(this)
+            R.id.action_alert_dialog ->
+                net.skhu.example.alertDialog.MainActivity::class.startActivity(this)
+            R.id.action_spinner ->
+                net.skhu.example.spinner.MainActivity::class.startActivity(this)
+            R.id.action_checkbox ->
+                net.skhu.example.checkbox.MainActivity::class.startActivity(this)
+            R.id.action_sample ->
+                net.skhu.example.firebase.sample.MainActivity::class.startActivity(this)
             else ->
                 super.onOptionsItemSelected(item)
         }

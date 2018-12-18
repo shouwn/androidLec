@@ -1,4 +1,4 @@
-package net.skhu.example.firebase.recyclerView
+package net.skhu.example.firebase
 
 class ItemList<Item> : ArrayList<Pair<String, Item>>(){
 
