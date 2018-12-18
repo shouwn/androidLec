@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import net.skhu.example.firebase.recyclerView.MainActivity
+import net.skhu.example.firebase.utils.startActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,14 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.action_firebase_with_recyclerView -> MainActivity::class.java.startActivity()
-            else -> super.onOptionsItemSelected(item)
+            R.id.action_firebase_with_recyclerView ->
+                MainActivity::class.startActivity(this)
+            R.id.action_firebase_log_in ->
+                net.skhu.example.firebase.logIn.MainActivity::class.startActivity(this)
+            else ->
+                super.onOptionsItemSelected(item)
         }
         return super.onOptionsItemSelected(item)
     }
-
-    private fun Class<out Activity>.startActivity(): Boolean =
-            startActivity(Intent(this@MainActivity, this@startActivity))
-                    .let { true }
-
 }

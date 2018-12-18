@@ -14,7 +14,7 @@ import net.skhu.example.R
 
 class MyRecyclerViewAdapter(
         context: Context,
-        val itemList: ItemList
+        val itemList: ItemList<Item>
 ) : RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
 
     private val layoutInflater = LayoutInflater.from(context)
@@ -43,7 +43,7 @@ class MyRecyclerViewAdapter(
         override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
             this@MyRecyclerViewAdapter.itemList.also {
                 it.getItem(super.getAdapterPosition()).checked = isChecked
-                if(it.getCheckedCount() <= 1) (textView1.context as Activity).invalidateOptionsMenu()
+                if(it.getCount { item -> item.checked } <= 1) (textView1.context as Activity).invalidateOptionsMenu()
             }
         }
 

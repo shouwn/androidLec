@@ -1,6 +1,6 @@
 package net.skhu.example.firebase.recyclerView
 
-class ItemList : ArrayList<Pair<String, Item>>(){
+class ItemList<Item> : ArrayList<Pair<String, Item>>(){
 
     fun getItem(index: Int) =
             this[index].second
@@ -8,8 +8,8 @@ class ItemList : ArrayList<Pair<String, Item>>(){
     fun getKey(index: Int) =
             this[index].first
 
-    fun getCheckedCount() =
-            this.count { it.second.checked }
+    fun getCount(filter: (Item) -> Boolean) =
+            this.count { filter(it.second) }
 
     private fun findIndex(key: String) =
             this.withIndex().find { it.value.first == key }?.index ?: -1

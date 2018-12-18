@@ -4,12 +4,15 @@ import android.app.Dialog
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v7.app.AlertDialog
+import android.util.Log
 import android.widget.EditText
 import net.skhu.example.R
 
 class ItemEditDialogFragment : DialogFragment() {
 
-    override fun onCreateDialog(savedInstanceState: Bundle): Dialog {
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        Log.i("ItemEditDialogFragment", "다이어로그 생성")
+
         val activity = (this.activity as MainActivity)
         val item = activity.itemList.getItem(activity.selectedIndex)
 

@@ -4,4 +4,7 @@
 
     <item android:id="@+id/action_firebase_with_recyclerView"
           android:title="@string/firebase_with_recyclerView" app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_firebase_log_in"
+          android:title="@string/firebase_log_in" app:showAsAction="ifRoom" />
 </menu>

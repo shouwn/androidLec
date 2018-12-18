@@ -1,13 +1,12 @@
 package net.skhu.example.firebase.recyclerView
 
-import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import android.view.ActionMode
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var firebaseDbService: FirebaseDbService
     var itemEditDialogFragment: ItemEditDialogFragment? = null
 
-    lateinit var itemList: ItemList
+    lateinit var itemList: ItemList<Item>
     var selectedIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,8 +90,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showItemEditDialog(position: Int){
-        if(itemEditDialogFragment == null)
+        if(itemEditDialogFragment == null) {
+            Log.i("MainActivity", "itemEditDialogFragment is null")
             itemEditDialogFragment = ItemEditDialogFragment()
+        }
 
         selectedIndex = position
         itemEditDialogFragment?.show(supportFragmentManager, "EditDialog")
@@ -100,7 +101,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
-        menu.findItem(R.id.action_remove).isVisible = itemList.getCheckedCount() > 0
+        menu.findItem(R.id.action_remove).isVisible = itemList.getCount { it.checked } > 0
         val user = FirebaseAuth.getInstance().currentUser
         menu.findItem(R.id.action_logIn).isVisible = user == null
         menu.findItem(R.id.action_logOut).isVisible = user != null
@@ -114,6 +115,7 @@ class MainActivity : AppCompatActivity() {
                 itemList.filter { it.second.checked }
                         .map { it.first }
                         .forEach { firebaseDbService.removeFromServer(it) }
+                menuItem.isVisible = false
                 return true
             }
             R.id.action_logIn ->

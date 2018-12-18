@@ -7,4 +7,5 @@
     <string name="example">example</string>
 
     <string name="firebase_with_recyclerView">Firebase RecyclerView</string>
+    <string name="firebase_log_in">Firebase Log In</string>
 </resources>

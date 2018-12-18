@@ -1,11 +1,12 @@
 package net.skhu.example.firebase.recyclerView
 
+import android.support.v7.widget.RecyclerView
 import android.util.Log
 import com.google.firebase.database.*
 
 class FirebaseDbService(
-        private val myRecyclerViewAdapter: MyRecyclerViewAdapter,
-        private val itemList: ItemList,
+        private val recyclerViewAdapter: RecyclerView.Adapter<out RecyclerView.ViewHolder>,
+        private val itemList: ItemList<Item>,
         private val userId: String,
         referencePath: String = "myServerData04",
         private val databaseReference: DatabaseReference =
@@ -39,7 +40,7 @@ class FirebaseDbService(
 
         Log.i("FirebaseDbService: ", "${index}에 ${item.title}가 추가됨")
 
-        myRecyclerViewAdapter.notifyItemInserted(index)
+        recyclerViewAdapter.notifyItemInserted(index)
     }
 
     override fun onChildChanged(dataSnapshot: DataSnapshot, previousChildName: String?) {
@@ -48,14 +49,14 @@ class FirebaseDbService(
 
         val index = itemList.update(key, item)
 
-        myRecyclerViewAdapter.notifyItemChanged(index)
+        recyclerViewAdapter.notifyItemChanged(index)
     }
 
     override fun onChildRemoved(dataSnapshot: DataSnapshot) {
         val key = dataSnapshot.key!!
         val index = itemList.remove(key)
 
-        myRecyclerViewAdapter.notifyItemRemoved(index)
+        recyclerViewAdapter.notifyItemRemoved(index)
     }
 
     override fun onChildMoved(p0: DataSnapshot, p1: String?) {
